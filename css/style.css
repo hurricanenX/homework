@@ -10,28 +10,60 @@ img{
 }
 
 header{
+	height: 100vh;
 	padding-top: 59px;
 	padding-bottom: 22px;
-	background-color: #3a7dfd;
-	background-image: linear-gradient(-147deg, #3a7dfd 0%, #1157db 100%);
+/*	background: linear-gradient(-147deg, rgba(103, 0, 31, 0.8), rgba(34, 101, 163, 0.5)), url("../img/shutterstock_349563746.jpg");
+	background-size: cover;*/
 	color: #fff;
 }
 
+path{
+	stroke: #fff;
+	fill: #fff;
+	stroke-dasharray: 2110;
+	opacity: 10;
+	animation: animate 3s cubic-bezier(0, 0.23, 1, .1);
+}
+
+@keyframes animate{
+	0%{
+		opacity: 0;
+		fill: none;
+		stroke-dashoffset: 2110;
+	}
+
+	30%{
+		opacity: 10;
+		fill: none;
+		stroke-dashoffset: 2110;
+	}
+
+	90%{
+		fill: rgba(255, 255, 255, 0);
+	}
+
+	100%{
+		opacity: 10;
+		fill: rgba(255, 255, 255, 1);
+		stroke-dashoffset: 0;
+	}
+}
+
+.svgnamePervov{
+	width: 400px;
+}
+
+.svgnameArtem{
+	width: 337px;
+	padding-left: 20px;
+}
+
 .header-pretitle{
-	margin-top: 102px;
+	margin-top: 0;
 }
 
-.header-title{
-	font-size: 48px;
-	font-weight: 700;
-	line-height: 46.81px;
-	margin-top: 21px;
-}
 
-.header-subtitle{
-	font-weight: 400;
-	margin-top: 20px;
-}
 .header-button{
 	display: inline-block;
 	text-decoration: none;
@@ -52,6 +84,7 @@ header{
 .header-button:hover{
 	box-shadow: none;
 }
+
 header small{
 	font-size: 12px;
 	display: block;
@@ -66,7 +99,8 @@ header small{
 /*Section portfolio*/
 
 .portfolio{
-	background-color: #dddddd;
+	position: relative;
+	/*background-color: #dddddd;*/
 	padding-top: 44px;
 	padding-bottom: 71px;
 }
@@ -76,18 +110,6 @@ header small{
 	padding-bottom: 44px;
 	background-color: #fff;
 }
-
-/*.portfolio-image-grad{
-	position: relative;
-
-}
-
-.empty-div{
-	position: absolute;
-	width: 457px;
-	height: 200px;
-	background-image: linear-gradient(to bottom, rgba(17, 87, 219, 0) 0%, rgba(0, 26, 76, 0.65) 100%);
-}*/
 
 .portfolio-title{
 	text-transform: uppercase;
@@ -142,7 +164,8 @@ header small{
 /* footer */
 
 footer{
-	background-color: #3a7dfd;
+	/*background: linear-gradient(-147deg, rgba(103, 0, 31, 0.8), rgba(34, 101, 163, 0.5)), url("../img/shutterstock_349563746.jpg");
+	background-size: cover;*/
 	color: #fff;
 	padding-top: 60px;
 	padding-bottom: 110px;
@@ -198,6 +221,20 @@ footer{
 	text-align: center;
 }
 
+.video-container{
+	position: fixed;
+	top: 0%;
+	left: 0%;
+	height: 100%;
+	width: 100%;
+}
+
+video{
+	min-width: 100%;
+	min-height: 100%;
+	width: auto; height: auto;
+}
+
 @media (max-width: 1200px){
 	.header-pretitle {
 		margin-top: 60px;
@@ -228,6 +265,14 @@ footer{
 		font-size: 14px;
 		padding: 8px 20px;
 	}
+	.svgnamePervov{
+		width: 200px;
+	}
+
+	.svgnameArtem{
+		width: 177px;
+		padding-left: 10px;
+	}
 }
 
 @media (max-width: 768px){
@@ -247,3 +292,11 @@ footer{
 		text-align: center;
 	}
 }
+
+ @supports (object-fit: cover) {
+      video {
+         top: 0; left: 0;
+         width: 100%; height: 100%;
+         object-fit: cover;
+     }
+ }
