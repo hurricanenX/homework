@@ -14,20 +14,23 @@
 		<link rel="icon" href="img/favicon.ico">
 		<!-- Заголовок на вкладке в браузере -->
 		<title>Портфолио</title>
-		<!-- Шрифты от Google -->
+		<!-- Шрифты от Google и Иконки от Font Awesome -->
 		<link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=cyrillic-ext" rel="stylesheet">
+		<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 		<!-- Подключаем наш файл со стилями, который находится в папке css-->
 		<link rel="stylesheet" href="css/animate.css">
 		<link rel="stylesheet" href="css/bootstrap-grid.min.css">
 		<link rel="stylesheet" href="css/style.css">  
+		<link rel="stylesheet" href="css/styleButton.css">
 </head>
 
 <body>
 
 			<div id="trailer" class="video-container">
-				<video preload="true" autoplay="autoplay" loop="loop" volume="0">
+				<video autoplay loop muted>
 					
-					<source src="video/illuminating.mp4" type="video/mp4"> 
+					<source src="video/illuminating30OP.mp4" type="video/mp4"> 
+					<source src="video/illuminating30OP.webm" type="video/webm">
 
 				</video>
 			</div>
@@ -248,11 +251,19 @@
 				</div>
 				<div class="col-md-4">
 					<div class="social-block">
-						<p>Подпишитесь</p>
-						<a href="https://vk.com/artemushqaaa" target="_blank"><img src="img/socials/facebook-logo-button.png" alt="facebook" class="wow fadeInUp" data-wow-delay="0.1s"></a>
-						<a href="https://t.me/hurricanen" target="_blank"><img src="img/socials/telegram-symbol.png" alt="telegram"  class="wow fadeInUp" data-wow-delay="0.2s"></a>
-						<a href="https://vk.com/artemushqaaa" target="_blank"><img src="img/socials/vk-social-logotype.png" alt="vk" class="wow fadeInUp" data-wow-delay="0.3s"></a>
-						<a href="https://www.youtube.com/channel/UCDpiX9S13UicjKWJT1EMGOQ?view_as=subscriber" target="_blank"><img src="img/socials/youtube-symbol.png" alt="youtube" class="wow fadeInUp" data-wow-delay="0.4s"></a>
+						<div class="share">
+							<div class="toggle"></div>
+							<ul>
+								<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+								<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+								<li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+								<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+								<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+								<li><a href="#"><i class="fa fa-skype" aria-hidden="true"></i></a></li>
+								<li><a href="#"><i class="fa fa-tumblr" aria-hidden="true"></i></a></li>
+								<li><a href="#"><i class="fa fa-whatsapp" aria-hidden="true"></i></a></li>
+							</ul>
+						</div>
 					</div>
 				</div>
 				<div class="col-md-4">
@@ -267,6 +278,16 @@
 		</div>
 		<!-- /.container -->
 	</footer>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script>
+    	$(document).ready(function(){
+    		$('.toggle').click(function(){
+    			$('.toggle').toggleClass('active')
+    			$('ul').toggleClass('active')
+    		})
+    	})
+    </script>
 
 	<script src="js/wow.min.js"></script>
 	<script>
